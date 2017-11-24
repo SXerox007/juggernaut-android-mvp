@@ -20,6 +20,18 @@ allprojects {
         google()
         jcenter()
     }
+
+    task checkstyle(type: Checkstyle) {
+        showViolations = true
+        configFile file("../checkstyleConfig/checkstyle.xml")
+        source 'src/main/java'
+        include '**/*.java'
+        exclude '**/gen/**'
+        exclude '**/constants/**'
+        exclude '**/R.java'
+        // empty classpath
+        classpath = files()
+    }
 }
 
 task clean(type: Delete) {

@@ -1,0 +1,71 @@
+package com.skeleton.mvpbase.ui.signin;
+
+
+import android.support.annotation.NonNull;
+
+import com.skeleton.mvpbase.R;
+import com.skeleton.mvpbase.model.CommonResponse;
+import com.skeleton.mvpbase.network.ApiError;
+import com.skeleton.mvpbase.ui.base.BasePresenterImpl;
+import com.skeleton.mvpbase.utils.ValidationUtils;
+
+/**
+ * Created by cl-macmini-01 on 9/20/17.
+ */
+
+public class SignInPresenterImpl extends BasePresenterImpl implements SignInPresenter {
+
+    private SignInView mSignInView;
+    private SignInInteractor mSignInInteractor;
+
+    /**
+     * Constructor
+     *
+     * @param signInView the associated SignIn view
+     */
+    SignInPresenterImpl(@NonNull final SignInView signInView) {
+        mSignInView = signInView;
+        mSignInInteractor = new SignInInteractorImpl();
+
+    }
+
+    @Override
+    public void onSignInClicked(final String email, final String password) {
+
+        // checking for validation
+        if (!ValidationUtils.checkEmail(email)) {
+            mSignInView.showErrorMessage(R.string.error_invalid_email);
+            return;
+        }
+
+        if (!ValidationUtils.checkPassword(password)) {
+            mSignInView.showErrorMessage(R.string.error_invalid_password);
+            return;
+        }
+
+        mSignInView.showLoading();
+        mSignInInteractor.login(email, password, new SignInInteractor.SignInListener() {
+            @Override
+            public void onSignInSuccess(final CommonResponse commonResponse) {
+                //todo handle success
+            }
+
+            @Override
+            public void onSignInFailed(final ApiError apiError, final Throwable throwable) {
+
+                if (isViewAttached()) {
+                    mSignInView.hideLoading();
+                    if (apiError != null) {
+                        mSignInView.showErrorMessage(apiError.getMessage());
+                    } else {
+                        // resolve error through throwable
+                        mSignInView.showErrorMessage(parseThrowableMessage(throwable));
+
+                    }
+                }
+            }
+        });
+    }
+
+
+}

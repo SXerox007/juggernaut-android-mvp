@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">AndroidMvpBase</string>
+
+    <!-- Fcm service -->
+    <string name="log_fcm_message_id">"FCM Message Id: "</string>
+    <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
+    <string name="log_fcm_data">"FCM Data: "</string>
+    <string name="log_fcm_data_message">"FCM Data Message: "</string>
+
+    <!-- Network error messages -->
+    <string name="error_unexpected_error">Something went wrong. Please try again later</string>
+    <string name="error_bad_connection_try_again">Bad connectivity, please try again</string>
+    <string name="error_remote_server_failed">Application server could not respond. Please try later</string>
+    <string name="error_paring">Parsing error</string>
+    <string name="error_internet_not_connected">Please check your internet connection or try again later.</string>
+    <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
+
+    <!-- Dialog -->
+    <string name="text_retry">Retry</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_proceed">Proceed</string>
+
+    <!-- Sign In -->
+    <string name="error_invalid_email">Please enter valid email address.</string>
+    <string name="error_invalid_password">Please enter valid password.</string>
+    <string name="txt_sign_in">Sign In</string>
+    <string name="txt_hint_enter_email_id">Enter Email ID</string>
+    <string name="txt_hint_enter_password">Password</string>
+
+
 </resources>

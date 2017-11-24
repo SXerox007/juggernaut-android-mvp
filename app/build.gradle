@@ -4,8 +4,24 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'checkstyle'
+preBuild.dependsOn('checkstyle')
+assemble.dependsOn('lint')
+check.dependsOn('checkstyle')
+
 android {
     compileSdkVersion 26
+
+    /**
+     * Define you Project Name here
+     */
+    def appName = 'MvpBase'
+
+    /**
+     * For Internal user only
+     */
+    def APP_NAME = '\"' + (System.getenv("APP_NAME") ?: appName) + '\"'
+
     defaultConfig {
         applicationId "com.skeleton.mvpbase"
         minSdkVersion 19
@@ -13,20 +29,82 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "APP_NAME", APP_NAME
     }
+
+    flavorDimensions "default"
+
     buildTypes {
-        release {
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    productFlavors {
+        DEV {
+            buildConfigField 'String', 'BASE_URL', '"http://35.154.119.33:3002/"'
+            buildConfigField 'boolean', 'WATER_MARK', 'true'
+
+        }
+        QA {
+            buildConfigField 'String', 'BASE_URL', '"YOUR TEST URL"'
+            buildConfigField 'boolean', 'WATER_MARK', 'true'
+
+        }
+        LIVE {
+            buildConfigField 'String', 'BASE_URL', '"YOUR_LIVE_URL"'
+            buildConfigField 'boolean', 'WATER_MARK', 'false'
+
+        }
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = ("${appName}_${variant.productFlavors[0].name}_${buildType.name}_v" +
+                        "${defaultConfig.versionCode}").toLowerCase().replace(" ", "_") + ".apk"
+            }
         }
     }
 }
 
+ext {
+    supportLibraryVersion = "26.1.0"
+    playServicesVersion = "11.6.0"
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //android support dependencies
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:customtabs:$supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+
+    //android FCM dependencies
+    implementation "com.google.firebase:firebase-messaging:$playServicesVersion"
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    // map and location dependencies
+    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-places:$playServicesVersion"
+
+    //paper db
+    implementation 'io.paperdb:paperdb:2.6'
 }

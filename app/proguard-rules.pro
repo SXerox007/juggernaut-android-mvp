@@ -19,3 +19,36 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Retrofit 2.X
+-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+# Platform calls Class.forName on types which do not exist on Android to determine platform.
+-dontnote retrofit2.Platform
+# Platform used when running on Java 8 VMs. Will not be used at runtime.
+-dontwarn retrofit2.Platform$Java8
+# Retain generic type information for use by reflection by converters and adapters.
+-keepattributes Signature
+# Retain declared checked exceptions for use by a Proxy instance.
+-keepattributes Exceptions
+-dontwarn okio.**
+
+# OkHttp
+-dontwarn com.squareup.okhttp.**
+-keepattributes *Annotation*
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.**
+
+#paper Db
+-keep class com.skeleton.mvpbase.model.** { *; }
+
+-keep class org.objenesis.** { *; }
+-keep interface org.objenesis.** { *; }
+-dontwarn org.objenesis.**
+-keep class com.skeleton.mvpbase.network.ApiError { *; }
+# Preserve opentok streaming dependencies
+#-keep class com.opentok.** { *; }
+#-keep class org.webrtc.** { *; }
+# For improved crash reporting with Crashlytics
+-keepattributes SourceFile,LineNumberTable
