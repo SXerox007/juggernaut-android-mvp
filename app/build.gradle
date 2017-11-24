@@ -50,7 +50,7 @@ android {
 
     productFlavors {
         DEV {
-            buildConfigField 'String', 'BASE_URL', '"http://35.154.119.33:3002/"'
+            buildConfigField 'String', 'BASE_URL', '"YOUR DEV URL"'
             buildConfigField 'boolean', 'WATER_MARK', 'true'
 
         }
