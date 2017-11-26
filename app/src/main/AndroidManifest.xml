@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.skeleton.mvpbase">
+    package="com.skeleton.mvp">
 
     <application
-        android:name=".MyApplication"
+        android:name="com.skeleton.mvp.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,35 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <service
-            android:name=".fcm.MyFirebaseMessagingService">
+        <service android:name="com.skeleton.mvp.fcm.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name=".fcm.MyFirebaseInstanceIdService">
+        <service android:name="com.skeleton.mvp.fcm.MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.skeleton.mvp.ui.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
 
         <activity
-            android:name=".ui.signin.SignInActivity"
+            android:name=".ui.onboarding.signin.SignInActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.onboarding.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 
