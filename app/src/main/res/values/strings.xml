@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">AndroidMvpBase</string>
-
     <!-- Fcm service -->
     <string name="log_fcm_message_id">"FCM Message Id: "</string>
     <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
@@ -14,6 +12,7 @@
     <string name="error_paring">Parsing error</string>
     <string name="error_internet_not_connected">Please check your internet connection or try again later.</string>
     <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
+    <string name="error_fb_login_failed">Facebook Login failed!!</string>
 
     <!-- Dialog -->
     <string name="text_retry">Retry</string>

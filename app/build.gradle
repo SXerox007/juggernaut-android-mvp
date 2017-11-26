@@ -41,10 +41,13 @@ android {
         applicationId "com.skeleton.mvp"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "APP_NAME", APP_NAME
+        resValue "string", "app_name", APP_NAME
+        resValue "string", "facebook_app_id", "[PROJECT_FB_ID]"
+        resValue "string", "fb_login_protocol_scheme", "fb[PROJECT_FB_ID]"
         manifestPlaceholders = [fabric_key: "4b99d2d21c7b5c9888d402bb7e7c5c851dc499c1"]
     }
 
@@ -126,6 +129,10 @@ dependencies {
 
     //Calligraphy (custom font lib)
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:4.28.0'
+
     compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
         transitive = true;
     }
