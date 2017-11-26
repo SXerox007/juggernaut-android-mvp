@@ -22,4 +22,23 @@
     <dimen name="spacing_very_tiny">2dp</dimen>
 
 
+    <!-- Custom views dimen -->
+    <dimen name="dialog_progress_wheel_width_height">70dp</dimen>
+
+
+
+    <!--met editext-->
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+    <dimen name="post_image_height">250dp</dimen>
+    <dimen name="empty_nav_view_height">25dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
 </resources>

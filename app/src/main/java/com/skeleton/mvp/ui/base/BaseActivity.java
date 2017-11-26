@@ -24,6 +24,8 @@ import com.skeleton.mvp.BuildConfig;
 import com.skeleton.mvp.constant.AppConstant;
 import com.skeleton.mvp.util.CommonUtils;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 /**
  * Created by cl-macmini-01 on 9/22/17
  * Base Activity
@@ -52,6 +54,11 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
                 showNotificationDialog(intent.getExtras());
             }
         };
+    }
+
+    @Override
+    protected void attachBaseContext(final Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override

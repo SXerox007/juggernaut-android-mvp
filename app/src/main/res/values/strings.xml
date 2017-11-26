@@ -19,6 +19,7 @@
     <string name="text_retry">Retry</string>
     <string name="text_exit">Exit</string>
     <string name="text_proceed">Proceed</string>
+    <string name="text_loading">Loading…</string>
 
     <!-- Sign In -->
     <string name="error_invalid_email">Please enter valid email address.</string>

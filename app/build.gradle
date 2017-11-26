@@ -1,4 +1,19 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 
 apply plugin: 'kotlin-android'
 
@@ -30,6 +45,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "APP_NAME", APP_NAME
+        manifestPlaceholders = [fabric_key: "4b99d2d21c7b5c9888d402bb7e7c5c851dc499c1"]
     }
 
     flavorDimensions "default"
@@ -107,4 +123,10 @@ dependencies {
 
     //paper db
     implementation 'io.paperdb:paperdb:2.6'
+
+    //Calligraphy (custom font lib)
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true;
+    }
 }

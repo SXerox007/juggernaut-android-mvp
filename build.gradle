@@ -27,7 +27,7 @@ allprojects {
         source 'src/main/java'
         include '**/*.java'
         exclude '**/gen/**'
-        exclude '**/constants/**'
+        exclude '**/constant/**'
         exclude '**/R.java'
         // empty classpath
         classpath = files()
