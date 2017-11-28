@@ -85,15 +85,11 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public void showErrorMessage(final int resId) {
-        new AlertDialog.Builder(this)
-                .setMessage(resId)
-                .setPositiveButton(android.R.string.ok, null)
-                .show();
+        showErrorMessage(getString(resId));
     }
 
     @Override
     public void showErrorMessage(final String errorMessage) {
-
         new AlertDialog.Builder(this)
                 .setMessage(errorMessage)
                 .setPositiveButton(android.R.string.ok, null)

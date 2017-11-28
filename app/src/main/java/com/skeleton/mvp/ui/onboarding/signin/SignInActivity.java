@@ -1,12 +1,9 @@
 package com.skeleton.mvp.ui.onboarding.signin;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.method.PasswordTransformationMethod;
+import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
 import com.skeleton.mvp.R;
 import com.skeleton.mvp.ui.base.BaseActivity;
@@ -18,10 +15,8 @@ import com.skeleton.mvp.ui.base.BaseActivity;
 
 public class SignInActivity extends BaseActivity implements View.OnClickListener, SignInView {
 
-    private EditText mEdtEmail;
-    private EditText mEdtPassword;
+    private AppCompatEditText etEmail, etPassword;
     private SignInPresenter mSignInPresenter;
-
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -42,35 +37,22 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
      * Init the views
      */
     private void init() {
+        etPassword = findViewById(R.id.etPassword);
+        etEmail = findViewById(R.id.etEmail);
 
-        mEdtPassword = (EditText) findViewById(R.id.edtPassword);
-        mEdtEmail = (EditText) findViewById(R.id.edtEmail);
-
-        mEdtPassword.setTypeface(Typeface.DEFAULT);
-        mEdtPassword.setTransformationMethod(new PasswordTransformationMethod());
-
-        Button btnSignIn = (Button) findViewById(R.id.btnSignIn);
-        btnSignIn.setOnClickListener(this);
-
+        findViewById(R.id.btnSignIn).setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(final View v) {
         switch (v.getId()) {
-
             case R.id.btnSignIn:
-
-                mSignInPresenter.onSignInClicked(mEdtEmail.getText().toString().trim(),
-                        mEdtPassword.getText().toString().trim());
-
+                mSignInPresenter.onSignInClicked(etEmail.getText().toString().trim(),
+                        etPassword.getText().toString().trim());
                 break;
-
             default:
-
                 break;
         }
     }
-
-
 }
