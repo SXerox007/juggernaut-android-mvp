@@ -1,4 +1,4 @@
-package com.skeleton.mvp.network;
+package com.skeleton.mvp.data.network;
 
 import android.net.Uri;
 import android.util.Log;

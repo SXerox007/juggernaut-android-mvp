@@ -1,4 +1,4 @@
-package com.skeleton.mvp.network;
+package com.skeleton.mvp.data.network;
 
 /**
  * Created by cl-macmini-01 on 11/23/17.

@@ -1,10 +1,10 @@
 package com.skeleton.mvp.ui.splash;
 
-import com.skeleton.mvp.database.CommonData;
+import com.skeleton.mvp.data.db.CommonData;
 import com.skeleton.mvp.fcm.FcmTokenInterface;
 import com.skeleton.mvp.fcm.MyFirebaseInstanceIdService;
 import com.skeleton.mvp.ui.base.BasePresenterImpl;
-import com.skeleton.mvp.util.RootUtils;
+import com.skeleton.mvp.util.RootUtil;
 
 /**
  * Created by cl-macmini-01 on 9/19/17.
@@ -27,7 +27,7 @@ class SplashPresenterImpl extends BasePresenterImpl implements SplashPresenter, 
     public void init() {
 
         // check for root
-        if (RootUtils.isDeviceRooted()) {
+        if (RootUtil.isDeviceRooted()) {
             mSplashView.showDeviceRootedAlert(new RootConfirmationListener() {
                 @Override
                 public void onProceed() {

@@ -14,7 +14,7 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.skeleton.mvp.R;
-import com.skeleton.mvp.constant.AppConstant;
+import com.skeleton.mvp.util.AppConstant;
 import com.skeleton.mvp.ui.splash.SplashActivity;
 import com.skeleton.mvp.util.Foreground;
 

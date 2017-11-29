@@ -1,7 +1,7 @@
 package com.skeleton.mvp.ui.onboarding.signin;
 
-import com.skeleton.mvp.model.CommonResponse;
-import com.skeleton.mvp.network.ApiError;
+import com.skeleton.mvp.data.model.CommonResponse;
+import com.skeleton.mvp.data.network.ApiError;
 
 /**
  * Created by cl-macmini-01 on 9/27/17.

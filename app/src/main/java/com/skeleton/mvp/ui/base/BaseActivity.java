@@ -21,8 +21,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.skeleton.mvp.BuildConfig;
-import com.skeleton.mvp.constant.AppConstant;
-import com.skeleton.mvp.util.CommonUtils;
+import com.skeleton.mvp.util.AppConstant;
+import com.skeleton.mvp.util.CommonUtil;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -99,7 +99,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public boolean isNetworkConnected() {
-        return CommonUtils.isNetworkAvailable(this);
+        return CommonUtil.isNetworkAvailable(this);
     }
 
 
@@ -183,7 +183,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         protected void onDraw(final Canvas canvas) {
             // put your drawing commands here
             paintText.setColor(Color.GRAY);
-            paintText.setTextSize(CommonUtils.dpToPx(BaseActivity.this, OVERLAY_TEXT_SIZE_INT));
+            paintText.setTextSize(CommonUtil.dpToPx(BaseActivity.this, OVERLAY_TEXT_SIZE_INT));
             paintText.getTextBounds(OVERLAY_TEXT, 0, OVERLAY_TEXT.length(), bounds);
             canvas.drawText(OVERLAY_TEXT,
                     getWidth() - (bounds.width() + TEN),

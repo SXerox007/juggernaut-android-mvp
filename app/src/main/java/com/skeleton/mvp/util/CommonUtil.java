@@ -20,12 +20,12 @@ import java.io.InputStream;
  * Dated: 19-02-2017.
  */
 
-public final class CommonUtils {
+public final class CommonUtil {
 
     /**
      * Prevent instantiation
      */
-    private CommonUtils() {
+    private CommonUtil() {
     }
 
     /**

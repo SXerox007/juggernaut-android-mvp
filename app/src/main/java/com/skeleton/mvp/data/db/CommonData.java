@@ -1,4 +1,4 @@
-package com.skeleton.mvp.database;
+package com.skeleton.mvp.data.db;
 
 
 import io.paperdb.Paper;

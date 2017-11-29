@@ -8,12 +8,12 @@ import java.io.InputStreamReader;
  * Created by cl-macmini-01 on 11/24/17.
  */
 
-public final class RootUtils {
+public final class RootUtil {
 
     /**
      * Prevent instantiation
      */
-    private RootUtils() {
+    private RootUtil() {
     }
 
     /**

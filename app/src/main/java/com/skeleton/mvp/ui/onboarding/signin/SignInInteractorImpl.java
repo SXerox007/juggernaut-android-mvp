@@ -1,9 +1,9 @@
 package com.skeleton.mvp.ui.onboarding.signin;
 
-import com.skeleton.mvp.model.CommonResponse;
-import com.skeleton.mvp.network.ApiError;
-import com.skeleton.mvp.network.ResponseResolver;
-import com.skeleton.mvp.network.RestClient;
+import com.skeleton.mvp.data.model.CommonResponse;
+import com.skeleton.mvp.data.network.ApiError;
+import com.skeleton.mvp.data.network.ResponseResolver;
+import com.skeleton.mvp.data.network.RestClient;
 
 import java.util.HashMap;
 import java.util.Map;

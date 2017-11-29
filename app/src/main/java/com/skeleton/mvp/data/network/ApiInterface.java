@@ -1,6 +1,6 @@
-package com.skeleton.mvp.network;
+package com.skeleton.mvp.data.network;
 
-import com.skeleton.mvp.model.CommonResponse;
+import com.skeleton.mvp.data.model.CommonResponse;
 
 import java.util.Map;
 

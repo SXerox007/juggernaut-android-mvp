@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
-import com.skeleton.mvp.database.CommonData;
+import com.skeleton.mvp.data.db.CommonData;
 
 /**
  * Developer: Saurabh Verma

@@ -1,4 +1,4 @@
-package com.skeleton.mvp.network;
+package com.skeleton.mvp.data.network;
 
 import com.skeleton.mvp.BuildConfig;
 import com.skeleton.mvp.MyApplication;

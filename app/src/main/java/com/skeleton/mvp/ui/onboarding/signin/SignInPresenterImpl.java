@@ -4,10 +4,10 @@ package com.skeleton.mvp.ui.onboarding.signin;
 import android.support.annotation.NonNull;
 
 import com.skeleton.mvp.R;
-import com.skeleton.mvp.model.CommonResponse;
-import com.skeleton.mvp.network.ApiError;
+import com.skeleton.mvp.data.model.CommonResponse;
+import com.skeleton.mvp.data.network.ApiError;
 import com.skeleton.mvp.ui.base.BasePresenterImpl;
-import com.skeleton.mvp.util.ValidationUtils;
+import com.skeleton.mvp.util.ValidationUtil;
 
 /**
  * Created by cl-macmini-01 on 9/20/17.
@@ -33,12 +33,12 @@ public class SignInPresenterImpl extends BasePresenterImpl implements SignInPres
     public void onSignInClicked(final String email, final String password) {
 
         // checking for validation
-        if (!ValidationUtils.checkEmail(email)) {
+        if (!ValidationUtil.checkEmail(email)) {
             mSignInView.showErrorMessage(R.string.error_invalid_email);
             return;
         }
 
-        if (!ValidationUtils.checkPassword(password)) {
+        if (!ValidationUtil.checkPassword(password)) {
             mSignInView.showErrorMessage(R.string.error_invalid_password);
             return;
         }

@@ -7,14 +7,14 @@ import android.util.Patterns;
  * Created by cl-macmini-01 on 9/28/17.
  */
 
-public final class ValidationUtils {
+public final class ValidationUtil {
 
     private static final int PASSWORD_LENGTH = 6;
 
     /**
      * Prevent instantiation
      */
-    private ValidationUtils() {
+    private ValidationUtil() {
     }
 
     /**
