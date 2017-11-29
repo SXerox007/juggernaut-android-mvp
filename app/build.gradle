@@ -69,17 +69,17 @@ android {
     }
 
     productFlavors {
-        DEV {
+        dev {
             buildConfigField 'String', 'BASE_URL', '"YOUR DEV URL"'
             buildConfigField 'boolean', 'WATER_MARK', 'true'
 
         }
-        QA {
+        qa {
             buildConfigField 'String', 'BASE_URL', '"YOUR TEST URL"'
             buildConfigField 'boolean', 'WATER_MARK', 'true'
 
         }
-        LIVE {
+        live {
             buildConfigField 'String', 'BASE_URL', '"YOUR_LIVE_URL"'
             buildConfigField 'boolean', 'WATER_MARK', 'false'
 
@@ -133,6 +133,13 @@ dependencies {
 
     //facebook
     implementation 'com.facebook.android:facebook-android-sdk:4.28.0'
+
+    //multi picker
+    implementation 'com.kbeanie:multipicker:1.1.31@aar'
+
+    //for cropping
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.3.+'
+
 
     compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
         transitive = true;

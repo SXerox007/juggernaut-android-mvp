@@ -1,4 +1,4 @@
-package com.skeleton.mvp.util;
+package com.skeleton.mvp.util.imagepicker;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -16,6 +16,8 @@ import android.provider.OpenableColumns;
 import android.support.annotation.IntRange;
 import android.support.v4.content.ContextCompat;
 
+import com.skeleton.mvp.util.Log;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,8 +29,7 @@ import java.util.ArrayList;
 
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ *
  */
 public final class ImageCompressor {
     private static final float MAX_WIDTH = 800.0f;

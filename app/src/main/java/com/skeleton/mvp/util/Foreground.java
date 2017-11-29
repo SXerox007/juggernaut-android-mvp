@@ -49,7 +49,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * Foreground.get(this).removeListener(listener);
  * }
  */
-public class Foreground implements Application.ActivityLifecycleCallbacks {
+public final class Foreground implements Application.ActivityLifecycleCallbacks {
 
     private static final long CHECK_DELAY = 500;
     private static final String TAG = Foreground.class.getName();

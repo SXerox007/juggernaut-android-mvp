@@ -25,7 +25,7 @@ import java.util.Collection;
  * Developer: Saurabh Verma
  * Dated: 07/07/17
  */
-public class FacebookManager {
+public final class FacebookManager {
     private static final String TAG = FacebookManager.class.getSimpleName();
 
     private static final Collection<String> PERMISSIONS_LIST = Arrays.asList("public_profile", "user_friends", "email");

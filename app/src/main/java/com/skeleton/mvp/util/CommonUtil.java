@@ -75,8 +75,7 @@ public final class CommonUtil {
      * @return px converted dp into px
      */
     public static int dpToPx(final Context context, final int dp) {
-        int px = Math.round(dp * getPixelScaleFactor(context));
-        return px;
+        return Math.round(dp * getPixelScaleFactor(context));
     }
 
     /**
@@ -87,8 +86,7 @@ public final class CommonUtil {
      * @return dp converted px into dp
      */
     public static int pxToDp(final Context context, final int px) {
-        int dp = Math.round(px / getPixelScaleFactor(context));
-        return dp;
+        return Math.round(px / getPixelScaleFactor(context));
     }
 
     /**

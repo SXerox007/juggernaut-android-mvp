@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Developer: Saurabh Verma
  * Dated: 07/07/17
  */
-public class FbUserDetails implements Parcelable {
+public final class FbUserDetails implements Parcelable {
 
     /**
      * The constant CREATOR.

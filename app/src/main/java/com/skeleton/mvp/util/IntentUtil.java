@@ -18,12 +18,12 @@ import java.util.List;
 /**
  * @author Dmitriy Tarasov
  */
-public final class IntentUtils {
+public final class IntentUtil {
     /**
      * Empty Constructor
      * not called
      */
-    private IntentUtils() {
+    private IntentUtil() {
     }
     /**
      * Open app page at Google Play. If Play Store application isn't available on the device
@@ -381,13 +381,13 @@ public final class IntentUtils {
      * @param scope You can restrict selection by passing required content type. Examples:
      *              <p>
      *              // Select only from users with emails
-     *              IntentUtils.pickContact(ContactsContract.CommonDataKinds.Email.CONTENT_TYPE);
+     *              IntentUtil.pickContact(ContactsContract.CommonDataKinds.Email.CONTENT_TYPE);
      *              <p>
      *              // Select only from users with phone numbers on pre Eclair devices
-     *              IntentUtils.pickContact(Contacts.Phones.CONTENT_TYPE);
+     *              IntentUtil.pickContact(Contacts.Phones.CONTENT_TYPE);
      *              <p>
      *              // Select only from users with phone numbers on devices with Eclair and higher
-     *              IntentUtils.pickContact(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+     *              IntentUtil.pickContact(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
      * @return intent
      */
     public static Intent pickContact(final String scope) {
@@ -450,7 +450,7 @@ public final class IntentUtils {
     public static boolean isCropAvailable(final Context context) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.setType("image/*");
-        return IntentUtils.isIntentAvailable(context, intent);
+        return IntentUtil.isIntentAvailable(context, intent);
     }
     /**
      * Crop image. Before using, cropImage requires especial check that differs from

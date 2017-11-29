@@ -14,7 +14,7 @@ import com.google.android.gms.maps.GoogleMap;
  * Developer: Saurabh Verma
  * Dated: 08/02/17.
  */
-public class TouchableWrapper extends FrameLayout {
+public final class TouchableWrapper extends FrameLayout {
     private static final int MIN_MILLISECONDS = 50;
     private static final int MAP_ZOOM_ANIM_DURATION = 400;
     private static final double ZOOM_VALUE_DIVIDER = 1.55d;

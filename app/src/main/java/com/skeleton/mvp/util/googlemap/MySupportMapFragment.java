@@ -12,7 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment;
  * Developer: Saurabh Verma
  * Dated: 03-03-2017.
  */
-public class MySupportMapFragment extends SupportMapFragment {
+public final class MySupportMapFragment extends SupportMapFragment {
     private View mOriginalContentView;
     private TouchableWrapper mTouchView;
 

@@ -14,9 +14,23 @@
     <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
     <string name="error_fb_login_failed">Facebook Login failed!!</string>
 
+    <!-- Error messages -->
+    <string name="error_not_a_valid_image_file">File is not a valid image.</string>
+
+    <!-- Image Chooser -->
+    <string name="text_cancel">Cancel</string>
+    <string name="text_camera">Camera</string>
+    <string name="text_setting">Settings</string>
+    <string name="text_gallery">Gallery</string>
+    <string name="text_multiple">Multiple</string>
+    <string name="text_choose_image">Choose Image</string>
+    <string name="permission_camera_storage_msg">Permissions are required for camera &amp; storage.</string>
+    <string name="permission_camera_storage_denied_msg">Permissions denied. Please grant permission for camera &amp; storage in setting.</string>
+
     <!-- Dialog -->
     <string name="text_retry">Retry</string>
     <string name="text_exit">Exit</string>
+    <string name="text_ok">Ok</string>
     <string name="text_proceed">Proceed</string>
     <string name="text_loading">Loading…</string>
 
