@@ -21,6 +21,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.skeleton.mvp.BuildConfig;
+import com.skeleton.mvp.R;
+import com.skeleton.mvp.data.network.ApiError;
+import com.skeleton.mvp.ui.dialog.ProgressDialog;
 import com.skeleton.mvp.util.AppConstant;
 import com.skeleton.mvp.util.CommonUtil;
 
@@ -85,15 +88,47 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public void showErrorMessage(final int resId) {
-        showErrorMessage(getString(resId));
+        showErrorMessage(getString(resId), null);
     }
 
     @Override
     public void showErrorMessage(final String errorMessage) {
+        showErrorMessage(errorMessage, null);
+    }
+
+    @Override
+    public void showErrorMessage(final String errorMessage, final OnErrorHandleCallback mOnErrorHandleCallback) {
         new AlertDialog.Builder(this)
                 .setMessage(errorMessage)
-                .setPositiveButton(android.R.string.ok, null)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, final int which) {
+                        if (mOnErrorHandleCallback != null) {
+                            mOnErrorHandleCallback.onErrorCallback();
+                        }
+                    }
+                })
                 .show();
+    }
+
+
+    @Override
+    public void showErrorMessage(final ApiError apiError) {
+        showErrorMessage(apiError, null);
+    }
+
+    @Override
+    public void showErrorMessage(final ApiError apiError, final OnErrorHandleCallback mOnErrorHandleCallback) {
+        if (apiError != null) {
+            if (apiError.getStatusCode() == AppConstant.SESSION_EXPIRED) {
+                //todo handle session expired case
+                CommonUtil.showToast(this, getString(R.string.error_session_expired));
+            } else {
+                showErrorMessage(apiError.getMessage(), mOnErrorHandleCallback);
+            }
+        } else {
+            showErrorMessage(getString(R.string.error_unexpected_error), mOnErrorHandleCallback);
+        }
     }
 
 
@@ -105,12 +140,17 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public void showLoading() {
-        // show loader
+        ProgressDialog.showProgressDialog(this);
+    }
+
+    @Override
+    public void showLoading(final String message) {
+        ProgressDialog.showProgressDialog(this, message);
     }
 
     @Override
     public void hideLoading() {
-        // hide loading
+        ProgressDialog.dismissProgressDialog();
     }
 
 

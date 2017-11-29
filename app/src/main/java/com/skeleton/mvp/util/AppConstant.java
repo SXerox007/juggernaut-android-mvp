@@ -10,6 +10,9 @@ public final class AppConstant {
     public static final String NOTIFICATION_RECEIVED = "notification_received";
     public static final String MESSAGE = "message";
 
+    //status code
+    public static final int SESSION_EXPIRED = 401;
+
     /**
      * Prevent instantiation
      */

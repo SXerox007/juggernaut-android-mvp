@@ -13,6 +13,7 @@
     <string name="error_internet_not_connected">Please check your internet connection or try again later.</string>
     <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
     <string name="error_fb_login_failed">Facebook Login failed!!</string>
+    <string name="error_session_expired">Session expired.</string>
 
     <!-- Error messages -->
     <string name="error_not_a_valid_image_file">File is not a valid image.</string>

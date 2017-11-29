@@ -1,9 +1,10 @@
 package com.skeleton.mvp.ui.base;
 
+import com.skeleton.mvp.data.network.ApiError;
+
 /**
  * Created by cl-macmini-01 on 9/27/17.
  */
-
 public interface BaseView {
 
     /**
@@ -19,6 +20,13 @@ public interface BaseView {
     void showLoading();
 
     /**
+     * Show loader with message
+     *
+     * @param message message which display with loading dialog
+     */
+    void showLoading(String message);
+
+    /**
      * Hide loader
      */
     void hideLoading();
@@ -31,9 +39,42 @@ public interface BaseView {
     void showErrorMessage(int stringId);
 
     /**
+     * Show error message.
+     *
+     * @param apiError the api error
+     */
+    void showErrorMessage(ApiError apiError);
+
+    /**
+     * Show error message.
+     *
+     * @param apiError               the api error
+     * @param mOnErrorHandleCallback the m on error handle callback
+     */
+    void showErrorMessage(ApiError apiError, OnErrorHandleCallback mOnErrorHandleCallback);
+
+    /**
      * Show error message
      *
      * @param message the message to show
      */
     void showErrorMessage(String message);
+
+    /**
+     * Show error message.
+     *
+     * @param message                the message
+     * @param mOnErrorHandleCallback the m on error handle callback
+     */
+    void showErrorMessage(String message, OnErrorHandleCallback mOnErrorHandleCallback);
+
+    /**
+     * The interface On error handle callback.
+     */
+    interface OnErrorHandleCallback {
+        /**
+         * On error callback.
+         */
+        void onErrorCallback();
+    }
 }
