@@ -25,7 +25,8 @@ assemble.dependsOn('lint')
 check.dependsOn('checkstyle')
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
 
     /**
      * Define you Project Name here
@@ -40,7 +41,7 @@ android {
     defaultConfig {
         applicationId "com.skeleton.mvp"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 100
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -94,7 +95,7 @@ android {
 }
 
 ext {
-    supportLibraryVersion = "26.1.0"
+    supportLibraryVersion = "27.0.1"
     playServicesVersion = "11.6.0"
 }
 
@@ -145,3 +146,4 @@ dependencies {
         transitive = true;
     }
 }
+apply plugin: 'com.google.gms.google-services'

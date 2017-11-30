@@ -62,7 +62,6 @@ class SplashPresenterImpl extends BasePresenterImpl implements SplashPresenter, 
 
     @Override
     public void onTokenReceived(final String token) {
-
         CommonData.updateFcmToken(token);
         //todo decide what to launch based on token
     }

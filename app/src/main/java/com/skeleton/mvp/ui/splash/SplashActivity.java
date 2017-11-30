@@ -1,6 +1,6 @@
 package com.skeleton.mvp.ui.splash;
 
-import android.app.Activity;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -61,8 +61,10 @@ public class SplashActivity extends BaseActivity implements SplashView {
         int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
         if (resultCode != ConnectionResult.SUCCESS) {
             if (apiAvailability.isUserResolvableError(resultCode)) {
-                apiAvailability.getErrorDialog(this, resultCode, REQ_CODE_PLAY_SERVICES_RESOLUTION)
-                        .show();
+                Dialog mErrorDialog = apiAvailability.getErrorDialog(this, resultCode, REQ_CODE_PLAY_SERVICES_RESOLUTION);
+                mErrorDialog.setCanceledOnTouchOutside(false);
+                mErrorDialog.setCancelable(false);
+                mErrorDialog.show();
             }
             return false;
         }
@@ -101,8 +103,7 @@ public class SplashActivity extends BaseActivity implements SplashView {
         super.onActivityResult(requestCode, resultCode, data);
 
         // handles play service resolution
-        if (requestCode == REQ_CODE_PLAY_SERVICES_RESOLUTION
-                && resultCode == Activity.RESULT_OK) {
+        if (requestCode == REQ_CODE_PLAY_SERVICES_RESOLUTION) {
             mSplashPresenter.registerForFcmToken();
         }
     }

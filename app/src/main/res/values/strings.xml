@@ -41,6 +41,11 @@
     <string name="txt_sign_in">Sign In</string>
     <string name="txt_hint_enter_email_id">Enter Email ID</string>
     <string name="txt_hint_enter_password">Password</string>
+    <string name="text_start_tutorial_msg">Welcome to MVP Base Project.
+        \n\n<b>1.</b> Change applicationId in app gradle.
+        \n<b>2.</b> Change app name from app gradle.
+        \n<b>3.</b> Replace google-services.json file.
+    </string>
 
 
 </resources>

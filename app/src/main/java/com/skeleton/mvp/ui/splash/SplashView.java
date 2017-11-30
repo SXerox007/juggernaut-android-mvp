@@ -6,7 +6,6 @@ import com.skeleton.mvp.ui.base.BaseView;
 /**
  * Created by cl-macmini-01 on 9/19/17.
  */
-
 public interface SplashView extends BaseView {
 
     /**
