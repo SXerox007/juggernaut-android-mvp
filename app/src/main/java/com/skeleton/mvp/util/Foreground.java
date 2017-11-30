@@ -10,8 +10,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ * Developer: Click Labs
  */
 
 /**

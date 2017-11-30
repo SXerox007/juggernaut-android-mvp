@@ -15,8 +15,7 @@ import android.widget.TextView;
 import com.skeleton.mvp.R;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ * Developer: Click Labs
  */
 public class CustomAlertDialog {
     /**

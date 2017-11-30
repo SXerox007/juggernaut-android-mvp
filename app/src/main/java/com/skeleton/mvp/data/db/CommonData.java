@@ -1,10 +1,9 @@
 package com.skeleton.mvp.data.db;
 
-
 import io.paperdb.Paper;
 
 /**
- * Developer: CL
+ * Developer: Click Labs
  */
 public final class CommonData {
 

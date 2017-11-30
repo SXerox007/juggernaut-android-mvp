@@ -3,10 +3,10 @@ package com.skeleton.mvp.data.network;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * Base error model
  */
-
 public class ApiError {
 
     @SerializedName("statusCode")

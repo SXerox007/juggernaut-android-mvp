@@ -14,7 +14,7 @@ import com.skeleton.mvp.ui.base.BaseActivity;
 
 
 /**
- * Created by cl-macmini-01 on 9/19/17.
+ * Developer: Click Labs
  */
 
 public class SplashActivity extends BaseActivity implements SplashView {

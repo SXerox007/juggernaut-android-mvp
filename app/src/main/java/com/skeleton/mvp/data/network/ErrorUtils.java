@@ -7,10 +7,10 @@ import retrofit2.Converter;
 import retrofit2.Response;
 
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * Error Utils
  */
-
 final class ErrorUtils {
 
     static final int DEFAULT_STATUS_CODE = 900;

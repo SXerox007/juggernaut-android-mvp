@@ -4,7 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * The Common Response model class
  */
 public class CommonResponse {

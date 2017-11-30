@@ -10,8 +10,7 @@ import com.skeleton.mvp.R;
 import com.skeleton.mvp.ui.customview.ProgressWheel;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 5/13/16.
+ * Developer: Click Labs
  */
 public final class ProgressDialog {
     private static final float DIM_AMOUNT = 0.6f;

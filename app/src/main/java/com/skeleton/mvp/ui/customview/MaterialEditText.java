@@ -42,8 +42,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static android.R.attr.padding;
 /**
- * Developer: Saurabh Verma
- * Dated: 21/11/16.
+ * EditText in Material Design
+ * <p/>
+ * author:rengwuxian
+ * <p/>
  */
 public class MaterialEditText extends AppCompatEditText {
     /**

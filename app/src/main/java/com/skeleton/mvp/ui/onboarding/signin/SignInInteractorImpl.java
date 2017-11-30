@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by cl-macmini-01 on 9/27/17.
+ * Developer: Click Labs
  */
 
 public class SignInInteractorImpl implements SignInInteractor {

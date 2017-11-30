@@ -10,9 +10,8 @@ import com.skeleton.mvp.ui.base.BaseActivity;
 
 
 /**
- * Created by cl-macmini-01 on 9/20/17.
+ * Developer: Click Labs
  */
-
 public class SignInActivity extends BaseActivity implements View.OnClickListener, SignInView {
 
     private AppCompatEditText etEmail, etPassword;

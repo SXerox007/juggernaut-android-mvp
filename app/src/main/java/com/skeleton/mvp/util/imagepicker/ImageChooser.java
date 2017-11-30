@@ -34,8 +34,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 /**
- * Developer: Saurabh Verma
- * Dated: 03-03-2017.
+ * Developer: Click Labs
  */
 
 public final class ImageChooser implements ImagePickerCallback {

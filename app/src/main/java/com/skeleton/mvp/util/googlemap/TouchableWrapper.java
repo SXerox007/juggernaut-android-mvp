@@ -11,8 +11,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 08/02/17.
+ * Developer: Click Labs
  */
 public final class TouchableWrapper extends FrameLayout {
     private static final int MIN_MILLISECONDS = 50;

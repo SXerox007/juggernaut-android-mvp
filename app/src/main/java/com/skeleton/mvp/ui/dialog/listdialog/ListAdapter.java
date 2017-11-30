@@ -13,8 +13,7 @@ import com.skeleton.mvp.R;
 import java.util.ArrayList;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 26/11/17.
+ * Developer: Click Labs
  */
 public class ListAdapter extends BaseAdapter {
     private final LayoutInflater mInflater;

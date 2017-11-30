@@ -9,8 +9,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 03-03-2017.
+ * Developer: Click Labs
  */
 public final class MySupportMapFragment extends SupportMapFragment {
     private View mOriginalContentView;

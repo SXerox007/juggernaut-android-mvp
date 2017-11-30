@@ -10,10 +10,10 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * The API interface for your application
  */
-
 public interface ApiInterface {
 
     //todo Declare your API endpoints here

@@ -16,8 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ * Developer: Click Labs
  */
 
 public final class CommonUtil {

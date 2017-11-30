@@ -4,7 +4,7 @@ package com.skeleton.mvp.ui.splash;
 import com.skeleton.mvp.ui.base.BaseView;
 
 /**
- * Created by cl-macmini-01 on 9/19/17.
+ * Developer: Click Labs
  */
 public interface SplashView extends BaseView {
 

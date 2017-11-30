@@ -12,8 +12,10 @@ import java.lang.ref.WeakReference;
 import io.paperdb.Paper;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
+
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * The Application class
  */
 

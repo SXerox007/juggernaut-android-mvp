@@ -2,11 +2,12 @@ package com.skeleton.mvp.data.network;
 
 import java.util.HashMap;
 
+
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * CommonParams builder helper
  */
-
 public final class CommonParams {
 
     private HashMap<String, String> map = new HashMap<>();

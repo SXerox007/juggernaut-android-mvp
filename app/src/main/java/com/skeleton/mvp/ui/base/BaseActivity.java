@@ -30,7 +30,8 @@ import com.skeleton.mvp.util.CommonUtil;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
- * Created by cl-macmini-01 on 9/22/17
+ * Developer: Click Labs
+ *
  * Base Activity
  */
 

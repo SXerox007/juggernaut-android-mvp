@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.InputStreamReader;
 
 /**
- * Created by cl-macmini-01 on 11/24/17.
+ * Developer: Click Labs
  */
 
 public final class RootUtil {

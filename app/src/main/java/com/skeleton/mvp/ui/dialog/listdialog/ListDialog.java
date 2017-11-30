@@ -12,8 +12,7 @@ import com.skeleton.mvp.R;
 import java.util.ArrayList;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 26/11/17.
+ * Developer: Click Labs
  */
 public final class ListDialog {
     private static final float DIM_AMOUNT = 0.6f;

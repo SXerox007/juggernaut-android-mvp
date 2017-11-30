@@ -14,14 +14,14 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.skeleton.mvp.R;
-import com.skeleton.mvp.util.AppConstant;
 import com.skeleton.mvp.ui.splash.SplashActivity;
+import com.skeleton.mvp.util.AppConstant;
 import com.skeleton.mvp.util.Foreground;
 
 import java.util.Map;
 
 /**
- * Developer: CL
+ * Developer: Click Labs
  */
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 

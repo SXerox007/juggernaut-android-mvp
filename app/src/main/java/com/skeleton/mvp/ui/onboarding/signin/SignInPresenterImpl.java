@@ -10,7 +10,7 @@ import com.skeleton.mvp.ui.base.BasePresenterImpl;
 import com.skeleton.mvp.util.ValidationUtil;
 
 /**
- * Created by cl-macmini-01 on 9/20/17.
+ * Developer: Click Labs
  */
 
 public class SignInPresenterImpl extends BasePresenterImpl implements SignInPresenter {

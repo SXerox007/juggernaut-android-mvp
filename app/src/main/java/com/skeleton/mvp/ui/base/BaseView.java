@@ -3,7 +3,8 @@ package com.skeleton.mvp.ui.base;
 import com.skeleton.mvp.data.network.ApiError;
 
 /**
- * Created by cl-macmini-01 on 9/27/17.
+ * Developer: Click Labs
+ *
  */
 public interface BaseView {
 

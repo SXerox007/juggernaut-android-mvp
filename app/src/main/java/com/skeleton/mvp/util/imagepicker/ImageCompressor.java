@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 
 /**
- *
+ * Developer: Click Labs
  */
 public final class ImageCompressor {
     private static final float MAX_WIDTH = 800.0f;

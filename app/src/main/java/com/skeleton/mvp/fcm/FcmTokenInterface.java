@@ -1,8 +1,7 @@
 package com.skeleton.mvp.fcm;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ * Developer: Click Labs
  */
 public interface FcmTokenInterface {
     /**

@@ -1,16 +1,17 @@
 package com.skeleton.mvp.data.network;
 
-/**
- * Created by cl-macmini-01 on 11/23/17.
- * Retrofit Response resolver
- */
-
 import android.support.annotation.NonNull;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
+/**
+ * Developer: Click Labs
+ *
+ * Retrofit Response resolver
+ */
 /**
  * Custom Retrofit ResponseResolver
  *

@@ -1,9 +1,8 @@
 package com.skeleton.mvp.ui.base;
 
 /**
- * Created by cl-macmini-01 on 9/20/17.
+ * Developer: Click Labs
  */
-
 public interface BasePresenter {
 
     /**

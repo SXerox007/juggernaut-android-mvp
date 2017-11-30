@@ -8,10 +8,10 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
 /**
- * Created by cl-macmini-01 on 11/23/17.
+ * Developer: Click Labs
+ *
  * MultiParams builder helper
  */
-
 public final class MultipartParams {
 
     private HashMap<String, RequestBody> map = new HashMap<>();

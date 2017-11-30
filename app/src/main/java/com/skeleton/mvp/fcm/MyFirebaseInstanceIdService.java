@@ -8,8 +8,7 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.skeleton.mvp.data.db.CommonData;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 19-02-2017.
+ * Developer: Click Labs
  */
 public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
     private static final String TAG = MyFirebaseInstanceIdService.class.getSimpleName();

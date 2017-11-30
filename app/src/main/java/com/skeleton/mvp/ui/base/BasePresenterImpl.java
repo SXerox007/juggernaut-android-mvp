@@ -8,9 +8,8 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
 /**
- * Created by cl-macmini-01 on 9/22/17.
+ * Developer: Click Labs
  */
-
 public class BasePresenterImpl implements BasePresenter {
 
     private boolean mIsViewAttached;

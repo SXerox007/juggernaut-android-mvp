@@ -15,8 +15,7 @@ import android.widget.LinearLayout;
 import com.skeleton.mvp.R;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 03-03-2017.
+ * Developer: Click Labs
  */
 public class CustomRatingBar extends LinearLayout {
     private static final int MAX_STARS = 5;

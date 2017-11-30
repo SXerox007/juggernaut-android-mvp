@@ -5,9 +5,8 @@ import com.skeleton.mvp.fcm.FcmTokenInterface;
 import com.skeleton.mvp.fcm.MyFirebaseInstanceIdService;
 import com.skeleton.mvp.ui.base.BasePresenterImpl;
 import com.skeleton.mvp.util.RootUtil;
-
 /**
- * Created by cl-macmini-01 on 9/19/17.
+ * Developer: Click Labs
  */
 
 class SplashPresenterImpl extends BasePresenterImpl implements SplashPresenter, FcmTokenInterface {

@@ -3,7 +3,7 @@ package com.skeleton.mvp.ui.onboarding.signin;
 import com.skeleton.mvp.ui.base.BasePresenter;
 
 /**
- * Created by cl-macmini-01 on 9/20/17.
+ * Developer: Click Labs
  */
 
 public interface SignInPresenter extends BasePresenter {

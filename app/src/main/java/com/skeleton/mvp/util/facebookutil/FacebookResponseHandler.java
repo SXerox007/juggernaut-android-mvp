@@ -3,8 +3,7 @@ package com.skeleton.mvp.util.facebookutil;
 import com.facebook.FacebookException;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 07/07/17
+ * Developer: Click Labs
  */
 public interface FacebookResponseHandler {
 

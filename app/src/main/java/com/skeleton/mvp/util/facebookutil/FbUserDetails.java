@@ -4,8 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Developer: Saurabh Verma
- * Dated: 07/07/17
+ * Developer: Click Labs
  */
 public final class FbUserDetails implements Parcelable {
 

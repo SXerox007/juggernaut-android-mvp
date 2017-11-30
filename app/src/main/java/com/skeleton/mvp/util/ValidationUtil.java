@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.util.Patterns;
 
 /**
- * Created by cl-macmini-01 on 9/28/17.
+ * Developer: Click Labs
  */
 
 public final class ValidationUtil {
