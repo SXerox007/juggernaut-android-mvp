@@ -43,7 +43,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     private BasePresenter mBasePresenter;
 
     /**
-     * Receiver To handle Location When App is in Foreground state
+     * Receiver To handle Notification When App is in Foreground state
      */
     private BroadcastReceiver notificationReceiver;
     private AlertDialog mNotificationDialog;
