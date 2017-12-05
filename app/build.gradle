@@ -95,8 +95,8 @@ android {
 }
 
 ext {
-    supportLibraryVersion = "27.0.1"
-    playServicesVersion = "11.6.0"
+    supportLibraryVersion = "27.0.2"
+    playServicesVersion = "11.6.2"
 }
 
 dependencies {
