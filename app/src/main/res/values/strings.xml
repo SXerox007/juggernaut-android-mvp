@@ -4,6 +4,8 @@
     <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
     <string name="log_fcm_data">"FCM Data: "</string>
     <string name="log_fcm_data_message">"FCM Data Message: "</string>
+    <string name="notification_channel_default">Notifications</string>
+    <string name="notification_channel_description_default">Latest Updates</string>
 
     <!-- Network error messages -->
     <string name="error_unexpected_error">Something went wrong. Please try again later</string>

@@ -48,8 +48,10 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
         handlerOs.postDelayed(new Runnable() {
             @Override
             public void run() {
-                fcmTokenCallback.onFailure();
-                fcmTokenCallback = null;
+                if (fcmTokenCallback != null) {
+                    fcmTokenCallback.onFailure();
+                    fcmTokenCallback = null;
+                }
             }
         }, FCM_CALL_TIMEOUT);
     }

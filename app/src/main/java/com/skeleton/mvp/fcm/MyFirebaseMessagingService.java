@@ -1,11 +1,13 @@
 package com.skeleton.mvp.fcm;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
@@ -26,15 +28,16 @@ import java.util.Map;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = MyFirebaseMessagingService.class.getName();
-    private static final String CHANNEL_ID = "default_01";
-    private static NotificationManager notificationManager;
+    private static final String DEFAULT_CHANNEL_ID = "default_01";
+    private static final long[] NOTIFICATION_VIBRATION_PATTERN = new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400};
+    private static NotificationManager mNotificationManager;
 
     /**
      * Clear notifications
      */
     public static void clearNotification() {
-        if (notificationManager != null) {
-            notificationManager.cancelAll();
+        if (mNotificationManager != null) {
+            mNotificationManager.cancelAll();
         }
     }
 
@@ -69,20 +72,37 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * @param data notification data map
      */
     public void showNotification(final Map<String, String> data) {
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         final Intent notificationIntent = new Intent(getApplicationContext(), SplashActivity.class);
         PendingIntent pi = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        Resources r = getResources();
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(data.get(AppConstant.MESSAGE)))
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle(r.getString(R.string.app_name))
-                .setContentText(data.get(AppConstant.MESSAGE))
-                .setContentIntent(pi)
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setPriority(Notification.PRIORITY_MAX)
-                .setAutoCancel(true)
-                .build();
-        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(0, notification);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // The user-visible name of the channel.
+            CharSequence name = getString(R.string.notification_channel_default);
+            // The user-visible description of the channel.
+            String description = getString(R.string.notification_channel_description_default);
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel(DEFAULT_CHANNEL_ID, name, importance);
+            // Configure the notification channel.
+            mChannel.setDescription(description);
+            mChannel.enableLights(true);
+            // Sets the notification light color for notifications posted to this
+            // channel, if the device supports this feature.
+            mChannel.setLightColor(Color.RED);
+            mChannel.enableVibration(true);
+            mChannel.setVibrationPattern(NOTIFICATION_VIBRATION_PATTERN);
+            mNotificationManager.createNotificationChannel(mChannel);
+        }
+
+        NotificationCompat.Builder mNotificationBuilder = new NotificationCompat.Builder(this, DEFAULT_CHANNEL_ID);
+        mNotificationBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(data.get(AppConstant.MESSAGE)));
+        mNotificationBuilder.setSmallIcon(R.mipmap.ic_launcher);
+        mNotificationBuilder.setContentTitle(getString(R.string.app_name));
+        mNotificationBuilder.setContentText(data.get(AppConstant.MESSAGE));
+        mNotificationBuilder.setContentIntent(pi);
+        mNotificationBuilder.setDefaults(Notification.DEFAULT_ALL);
+        mNotificationBuilder.setPriority(Notification.PRIORITY_MAX);
+        mNotificationBuilder.setAutoCancel(true);
+        mNotificationManager.notify(0, mNotificationBuilder.build());
     }
 }
