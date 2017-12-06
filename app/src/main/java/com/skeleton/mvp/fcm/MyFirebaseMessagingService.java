@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -94,15 +95,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             mNotificationManager.createNotificationChannel(mChannel);
         }
 
-        NotificationCompat.Builder mNotificationBuilder = new NotificationCompat.Builder(this, DEFAULT_CHANNEL_ID);
-        mNotificationBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(data.get(AppConstant.MESSAGE)));
-        mNotificationBuilder.setSmallIcon(R.mipmap.ic_launcher);
-        mNotificationBuilder.setContentTitle(getString(R.string.app_name));
-        mNotificationBuilder.setContentText(data.get(AppConstant.MESSAGE));
-        mNotificationBuilder.setContentIntent(pi);
-        mNotificationBuilder.setDefaults(Notification.DEFAULT_ALL);
-        mNotificationBuilder.setPriority(Notification.PRIORITY_MAX);
-        mNotificationBuilder.setAutoCancel(true);
-        mNotificationManager.notify(0, mNotificationBuilder.build());
+
+        Notification mNotification = new NotificationCompat.Builder(this, DEFAULT_CHANNEL_ID)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(data.get(AppConstant.MESSAGE)))
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
+                .setContentTitle(getString(R.string.app_name))
+                .setContentText(data.get(AppConstant.MESSAGE))
+                .setContentIntent(pi)
+                .setDefaults(Notification.DEFAULT_ALL)
+                .setPriority(Notification.PRIORITY_MAX)
+                .setAutoCancel(true)
+                .setChannelId(DEFAULT_CHANNEL_ID)
+                .build();
+        mNotificationManager.notify(0, mNotification);
     }
 }
