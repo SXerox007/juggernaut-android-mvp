@@ -11,7 +11,7 @@ import retrofit2.http.POST;
 
 /**
  * Developer: Click Labs
- *
+ * <p>
  * The API interface for your application
  */
 public interface ApiInterface {
@@ -27,5 +27,24 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("/signIn")
     Call<CommonResponse> signIn(@FieldMap Map<String, String> map);
+
+
+    /**
+     * @param map map
+     * @return return the response
+     */
+    @FormUrlEncoded
+    @POST("/signUp")
+    Call<CommonResponse> signUp(@FieldMap Map<String, String> map);
+
+
+    /**
+     * @param map map
+     * @return return the response
+     */
+    @FormUrlEncoded
+    @POST("/forgotPassword")
+    Call<CommonResponse> forgotPassword(@FieldMap Map<String, String> map);
+
 
 }

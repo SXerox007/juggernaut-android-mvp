@@ -3,6 +3,7 @@ package com.skeleton.mvp.util;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.widget.EditText;
+
 /**
  * Developer: Click Labs
  */
@@ -25,16 +26,27 @@ public final class EditTextUtil {
             return null;
         }
     };
+
     /**
      * Empty Constructor
      * not called
      */
     private EditTextUtil() {
     }
+
     /**
      * @param editText instance of that edittext on which no space functionality want
      */
     public static void blockSpace(final EditText editText) {
         editText.setFilters(new InputFilter[]{filter});
     }
+
+    /**
+     * @param etField edit Text
+     * @return string from edit text
+     */
+    public static String getTextFromEditText(final EditText etField) {
+        return etField.getText().toString();
+    }
+
 }
