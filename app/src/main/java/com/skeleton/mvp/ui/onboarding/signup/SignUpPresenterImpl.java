@@ -28,7 +28,6 @@ public class SignUpPresenterImpl extends BasePresenterImpl implements SignUpPres
 
     @Override
     public void onSignUpClicked(final String email, final String name, final String password, final String rePassword) {
-
         if (!ValidationUtil.checkEmail(email)) {
             mSignUpView.showErrorMessage(R.string.error_invalid_email);
         } else if (ValidationUtil.validateName(name)) {
@@ -59,7 +58,7 @@ public class SignUpPresenterImpl extends BasePresenterImpl implements SignUpPres
      * @param password   password
      * @param rePassword re-Password
      */
-    private boolean matchPassword(final String password, final String rePassword) {
+    public boolean matchPassword(final String password, final String rePassword) {
         return password.equals(rePassword);
     }
 

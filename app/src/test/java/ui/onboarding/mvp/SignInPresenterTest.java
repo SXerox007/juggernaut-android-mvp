@@ -45,12 +45,6 @@ public class SignInPresenterTest {
     }
 
     @Test
-    public void checkIfShowsPasswordErrorOnSignInClicked() {
-        presenter.onSignInClicked("test@test.com", "123");
-        verify(view, times(1)).showErrorMessage(Mockito.anyInt());
-    }
-
-    @Test
     public void checkIfShowsProgressOnSignInClicked() {
         presenter.onSignInClicked("test@test.com", "Qwerty12");
         verify(view, times(1)).showLoading();
