@@ -5,19 +5,39 @@ import android.support.annotation.NonNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 
 
 /**
  * Developer: Click Labs
- *
+ * <p>
  * Retrofit Response resolver
  */
+
 /**
  * Custom Retrofit ResponseResolver
  *
  * @param <T> the response type
  */
 public abstract class ResponseResolver<T> implements Callback<T> {
+
+
+    private Retrofit mRetrofit;
+
+    /**
+     * @param mRetrofit retrofit
+     */
+    public ResponseResolver(final Retrofit mRetrofit) {
+        this.mRetrofit = mRetrofit;
+
+    }
+
+    /**
+     * response resolver
+     */
+    public ResponseResolver() {
+
+    }
 
     /**
      * On Api response success

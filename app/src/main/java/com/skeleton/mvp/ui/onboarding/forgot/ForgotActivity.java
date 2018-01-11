@@ -12,6 +12,7 @@ import com.skeleton.mvp.util.EditTextUtil;
 /**
  * Created by sumitthakur on 17/12/17.
  */
+
 public class ForgotActivity extends BaseActivity implements ForgotView, View.OnClickListener {
 
     private MaterialEditText metEmail;

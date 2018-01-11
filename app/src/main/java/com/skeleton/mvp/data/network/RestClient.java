@@ -63,6 +63,7 @@ public final class RestClient {
         return retrofit.create(ApiInterface.class);
     }
 
+
     /**
      * Gets image upload api interface.
      *
@@ -85,7 +86,7 @@ public final class RestClient {
      *
      * @return object of Retrofit
      */
-    static Retrofit getRetrofitBuilder() {
+    public static Retrofit getRetrofitBuilder() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BuildConfig.BASE_URL)

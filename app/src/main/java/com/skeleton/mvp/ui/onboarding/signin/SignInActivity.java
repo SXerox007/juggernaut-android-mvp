@@ -6,6 +6,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
 
 import com.skeleton.mvp.R;
+import com.skeleton.mvp.data.network.RestClient;
 import com.skeleton.mvp.ui.base.BaseActivity;
 
 
@@ -22,7 +23,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         init();
-        mSignInPresenter = new SignInPresenterImpl(this);
+        mSignInPresenter = new SignInPresenterImpl(this, new SignInInteractorImpl(RestClient.getRetrofitBuilder()));
         mSignInPresenter.onAttach();
     }
 

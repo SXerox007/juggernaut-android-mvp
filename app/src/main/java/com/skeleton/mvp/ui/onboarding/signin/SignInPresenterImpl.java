@@ -21,11 +21,12 @@ public class SignInPresenterImpl extends BasePresenterImpl implements SignInPres
     /**
      * Constructor
      *
-     * @param signInView the associated SignIn view
+     * @param signInView        the associated SignIn view
+     * @param mSignInInteractor sign in interactor
      */
-    SignInPresenterImpl(@NonNull final SignInView signInView) {
-        mSignInView = signInView;
-        mSignInInteractor = new SignInInteractorImpl();
+    public SignInPresenterImpl(@NonNull final SignInView signInView, @NonNull final SignInInteractorImpl mSignInInteractor) {
+        this.mSignInView = signInView;
+        this.mSignInInteractor = mSignInInteractor;
 
     }
 
