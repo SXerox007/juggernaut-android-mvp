@@ -4,7 +4,6 @@ import com.skeleton.mvp.data.model.CommonResponse;
 import com.skeleton.mvp.data.network.ApiError;
 import com.skeleton.mvp.data.network.ApiInterface;
 import com.skeleton.mvp.data.network.ResponseResolver;
-import com.skeleton.mvp.data.network.RestClient;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +19,10 @@ public class SignUpInteractorImpl implements SignUpInteractor {
     private ApiInterface mApiInterface;
     private Retrofit mRetrofit;
 
-    public SignUpInteractorImpl(Retrofit retrofitBuilder) {
+    /**
+     * @param retrofitBuilder retrofit builder
+     */
+    public SignUpInteractorImpl(final Retrofit retrofitBuilder) {
         this.mRetrofit = retrofitBuilder;
         this.mApiInterface = mRetrofit.create(ApiInterface.class);
     }

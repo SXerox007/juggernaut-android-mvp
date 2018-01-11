@@ -17,9 +17,8 @@ public class SignUpPresenterImpl extends BasePresenterImpl implements SignUpPres
 
 
     /**
-     *
-     * @param signUpView
-     * @param signUpInteractor
+     * @param signUpView signup view
+     * @param signUpInteractor signup Interactor
      */
     public SignUpPresenterImpl(final SignUpView signUpView, final SignUpInteractorImpl signUpInteractor) {
         this.mSignUpView = signUpView;
@@ -57,6 +56,7 @@ public class SignUpPresenterImpl extends BasePresenterImpl implements SignUpPres
     /**
      * @param password   password
      * @param rePassword re-Password
+     * @return booleam value
      */
     public boolean matchPassword(final String password, final String rePassword) {
         return password.equals(rePassword);

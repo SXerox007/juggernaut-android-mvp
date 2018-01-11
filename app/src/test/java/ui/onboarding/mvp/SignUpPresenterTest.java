@@ -42,14 +42,20 @@ public class SignUpPresenterTest {
 
     @Test
     public void checkOnSignUpClicked() {
-        presenter.onSignUpClicked("sumit@gmail.com", "sumit","12345678","12345678");
+        presenter.onSignUpClicked("sumit@gmail.com", "sumit", "12345678", "12345678");
         verify(view, times(1)).showErrorMessage(Mockito.anyInt());
     }
 
-//    @Test
-//    public void check_password_match_or_not(){
-//        Assert.assertEquals(false, );
-//    }
+    @Test
+    public void check_password_match() {
+        Assert.assertEquals(true, presenter.matchPassword("12345678", "12345678"));
+    }
+
+
+    @Test
+    public void check_password_not_match() {
+        Assert.assertEquals(false, presenter.matchPassword("123456789", "12345678"));
+    }
 
 
     @Test
@@ -57,9 +63,6 @@ public class SignUpPresenterTest {
         presenter.onDetach();
         assertEquals(false, presenter.isViewAttached());
     }
-
-
-
 
 
 }

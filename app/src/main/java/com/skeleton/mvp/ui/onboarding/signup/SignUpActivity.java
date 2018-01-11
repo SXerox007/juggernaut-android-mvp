@@ -36,7 +36,7 @@ public class SignUpActivity extends BaseActivity implements SignUpView, View.OnC
         etName = findViewById(R.id.etName);
         etPassword = findViewById(R.id.etPassword);
         etRePassword = findViewById(R.id.etRePassword);
-        signUpPresenter = new SignUpPresenterImpl(this,new SignUpInteractorImpl(RestClient.getRetrofitBuilder()));
+        signUpPresenter = new SignUpPresenterImpl(this, new SignUpInteractorImpl(RestClient.getRetrofitBuilder()));
         findViewById(R.id.btnSignUp).setOnClickListener(this);
     }
 
