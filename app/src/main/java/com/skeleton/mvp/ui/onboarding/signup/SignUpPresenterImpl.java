@@ -17,12 +17,13 @@ public class SignUpPresenterImpl extends BasePresenterImpl implements SignUpPres
 
 
     /**
-     * @param signUpView signup view
+     *
+     * @param signUpView
+     * @param signUpInteractor
      */
-    public SignUpPresenterImpl(final SignUpView signUpView) {
+    public SignUpPresenterImpl(final SignUpView signUpView, final SignUpInteractorImpl signUpInteractor) {
         this.mSignUpView = signUpView;
-        signUpInteractor = new SignUpInteractorImpl();
-
+        this.signUpInteractor = signUpInteractor;
     }
 
     @Override

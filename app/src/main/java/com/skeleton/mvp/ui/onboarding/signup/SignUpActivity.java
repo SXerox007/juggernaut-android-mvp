@@ -7,6 +7,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
 
 import com.skeleton.mvp.R;
+import com.skeleton.mvp.data.network.RestClient;
 import com.skeleton.mvp.ui.base.BaseActivity;
 import com.skeleton.mvp.util.EditTextUtil;
 
@@ -35,7 +36,7 @@ public class SignUpActivity extends BaseActivity implements SignUpView, View.OnC
         etName = findViewById(R.id.etName);
         etPassword = findViewById(R.id.etPassword);
         etRePassword = findViewById(R.id.etRePassword);
-        signUpPresenter = new SignUpPresenterImpl(this);
+        signUpPresenter = new SignUpPresenterImpl(this,new SignUpInteractorImpl(RestClient.getRetrofitBuilder()));
         findViewById(R.id.btnSignUp).setOnClickListener(this);
     }
 
